@@ -1,0 +1,186 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: grey;
+  line-height: 1.65;
+  padding-bottom: 1000px;
+}
+
+/* latihan 1 */
+.container-satu {
+  width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+
+}
+
+.kolom-utama {
+  flex: 3;
+  order: 2;
+  text-align: justify;
+  padding-right: 30px;
+
+}
+
+.sidebar-satu {
+  flex: 1;
+  order: 1;
+}
+
+.sidebar-dua {
+  flex: 1;
+  order: 3;
+  text-align: justify;
+  padding-right: 5px;
+}
+/* akhir latihan */
+
+
+
+/* latihan 2 */
+.container-dua {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.layanan-satu {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(94, 113, 237);
+  margin-bottom: 10px ;
+}
+.layanan-dua {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(109, 240, 85);
+  margin-bottom: 10px ;
+}
+.layanan-tiga {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(241, 101, 101);
+  margin-bottom: 10px ;
+}
+/* akhir latinan */
+
+/* latihan 3 */
+.container-tiga {
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 50%;
+}
+
+
+.thumbnail img {
+  width: 100%;
+}
+/* akhir latihan 3 */
+
+
+/* latihan 4 -  */
+.container-empat {
+  width: 800px;
+  margin: 50px auto;
+  display: flex;
+  position: relative;
+}
+
+.card {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  margin: 10px;
+  flex: 1;
+}
+
+.card .header {
+  height: 150px;
+  background-color: #666;
+}
+
+.card .content {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.card.besar {
+  /* transform: scale(1.12); */
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 10px rgb(58, 7, 7));
+  scale: 1.1;
+  transition: all .5s;
+}
+/* membuat konten ditengah container */
+.button {
+  display: flex;
+  /* justify-content: center; */ 
+  margin-bottom: 10px;
+}
+/* cara membuat konten berada di tengah container adalah dengan membuat parent berdisplay "flex" lalu, pada child kita buat "margin: auto" */
+button {
+  margin: auto;
+}
+/* akhir latihan 4 */
+
+/* latihan 5 */
+.container-lima {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: flex;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
+}
+/* bagaimana cara membuat tulisan yang terdapa di dalam kotak bisa terisi tanpa keluar dari containernya dan tulisan tetap berada di tengah containernya? caranya dengan menggunakan tag "<span></span> dengan mendisplaykan container ".kotak"  "display:flex" lalu membuat ".kotak span {}" menjadi "margin: auto;" lalu...*/
+.kotak span {
+  margin: auto;
+}
+
+
+/* akhir latihan 5 */
+
+
+/* responsive */
+@media( min-width: 600px ) {
+  .container-dua {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .layanan-satu {  
+    width: 30%;
+  }
+  .layanan-dua {  
+    width: 30%;
+  }
+  .layanan-tiga { 
+    width: 30%;
+  }
+  .thumbnail {
+    width: 25%;
+  }
+}
